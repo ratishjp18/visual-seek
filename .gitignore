@@ -1,11 +1,14 @@
 # Virtual environments
 .venv/
+backend/.venv/
+**/.venv/
 env/
 venv/
 ENV/
 
 # Python cache & build
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -14,7 +17,12 @@ __pycache__/
 # Node & Frontend
 node_modules/
 frontend/node_modules/
+**/node_modules/
 frontend/dist/
+dist/
+.vite/
+frontend/.vite/
+**/.vite/
 .npm
 .pnpm-debug.log*
 
@@ -24,6 +32,7 @@ backend/data/*.index
 backend/uploads/thumbnails/*
 backend/uploads/queries/*
 backend/uploads/*.*
+backend/uploads/
 
 # System & IDE
 .DS_Store
