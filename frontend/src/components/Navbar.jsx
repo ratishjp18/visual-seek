@@ -17,14 +17,19 @@ export default function Navbar({ activeTab, setActiveTab, onOpenUpload, stats })
           
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-500 to-cyan-400 p-[1px] flex items-center justify-center shadow-lg shadow-brand-500/20">
-              <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-brand-400 animate-pulse" />
+            <div className="relative group cursor-pointer" onClick={() => setActiveTab('search')}>
+              <div className="w-10 h-10 rounded-xl overflow-hidden p-[1px] bg-gradient-to-tr from-cyan-400 via-brand-500 to-indigo-500 shadow-lg shadow-cyan-500/20 transition-transform duration-300 group-hover:scale-105">
+                <img
+                  src="/logo.svg"
+                  alt="VisualSeek Logo"
+                  className="w-full h-full object-contain bg-slate-950 rounded-[11px] p-0.5"
+                />
               </div>
+              <div className="absolute -inset-0.5 bg-cyan-400 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300 pointer-events-none" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+                <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
                   VisualSeek
                 </span>
                 <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20 font-semibold">
